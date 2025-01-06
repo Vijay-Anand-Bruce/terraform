@@ -2,7 +2,7 @@ resource "aws_instance" "web" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   key_name               = var.key_name
-  vpc_security_group_ids = [var.security_group_id]
+  vpc_security_group_ids = ["sg-0d0eca3dff162f3d9"]
 
   root_block_device {
     volume_size = var.volume_size

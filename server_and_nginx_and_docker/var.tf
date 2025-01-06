@@ -5,17 +5,17 @@ variable "aws_region" {
 
 variable "instance_type" {
   description = "The type of instance to use"
-  default     = "t2.micro"
+  type  = string
 }
 
 variable "ami_id" {
   description = "The AMI ID to use for the instance"
-  type        = string
+  type  = string
 }
 
 variable "volume_size" {
   description = "The size of the root volume in GB"
-  default    = 8
+  type  = string
 }
 
 variable "instance_name" {
@@ -28,11 +28,6 @@ variable "key_name" {
   type    = string
 }
 
-variable "security_group_id" {
-  description = "The ID of the existing security group"
-  type    = string
-}
-
 variable "key_path" {
   description = "The path to the private key file"
   type        = string
@@ -40,5 +35,5 @@ variable "key_path" {
 
 variable "ebs_volume" {
   description = "Attach ebs volume"
-  type  = string
+  default = "8"
 }
